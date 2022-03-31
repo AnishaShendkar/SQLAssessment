@@ -1,0 +1,5 @@
+SELECT COUNT(PROJECT_ID) FROM allocation
+WHERE EMP_ID=(
+SELECT EMP_ID FROM employee
+WHERE HIRE_DATE=(SELECT MIN(HIRE_DATE) FROM employee) );
+--no projects are handled by the senior most employee
