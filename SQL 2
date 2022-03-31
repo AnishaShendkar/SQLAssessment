@@ -1,0 +1,4 @@
+SELECT employee.EMP_ID, EMP_NAME FROM employee
+WHERE employee.EMP_ID NOT IN(
+SELECT allocation.EMP_ID from allocation GROUP BY EMP_ID
+);
