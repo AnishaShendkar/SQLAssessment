@@ -1,0 +1,4 @@
+date in Allocation table)?
+SELECT PROJECT_ID 
+FROM allocation
+WHERE to_date <= '2022-03-10' GROUP BY PROJECT_ID
